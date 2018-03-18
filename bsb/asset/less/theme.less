@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+@font-face {
+	font-family: "CenturyGothic";
+	src: url("../fonts/07723_Cgothicb0.eot");
+	src: url("../fonts/07723_Cgothicb0.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/07723_Cgothicb0.woff") format("woff"),
+	url("../fonts/07723_Cgothicb0.ttf") format("truetype"),
+	url("../fonts/07723_Cgothicb0.svg#07723_Cgothicb0") format("svg");
+	font-weight: 700;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@breakpoint-midlarge : 1170px;
+@breakpoint-midlarge-max : 1169px;
+
+@breakpoint-midsmall : 480px;
+@breakpoint-midsmall-max : 479px;
+
+/*============================================
+=            UIKIT GRID EXTENSION            =
+============================================*/
+.hook-grid-misc() {
+	.uk-width-1-12 { width: 8.333%; }
+	.uk-width-2-12 { width: 16.666%; }
+	.uk-width-3-12 { width: 25%; }
+	.uk-width-4-12 { width: 33.333%; }
+	.uk-width-5-12 { width: 41.666%; }
+	.uk-width-6-12 { width: 50%; }
+	.uk-width-7-12 { width: 58.333%; }
+	.uk-width-8-12 { width: 66.666%; }
+	.uk-width-9-12 { width: 75%; }
+	.uk-width-10-12 { width: 83.333%; }
+	.uk-width-11-12 { width: 91.666%; }
+
+	.uk-push-1-12 { left: 8.333%; }
+
+	/* Only tablets and desktop */
+	@media (min-width: @breakpoint-medium) {
+
+		.uk-width-medium-1-12 { width: 8.333%; }
+		.uk-width-medium-2-12 { width: 16.666%; }
+		.uk-width-medium-3-12 { width: 25%; }
+		.uk-width-medium-4-12 { width: 33.333%; }
+		.uk-width-medium-5-12 { width: 41.666%; }
+		.uk-width-medium-6-12 { width: 50%; }
+		.uk-width-medium-7-12 { width: 58.333%; }
+		.uk-width-medium-8-12 { width: 66.666%; }
+		.uk-width-medium-9-12 { width: 75%; }
+		.uk-width-medium-10-12 { width: 83.333%; }
+		.uk-width-medium-11-12 { width: 91.666%; }
+
+	}
+
+	/* Only desktop */
+	@media (min-width: @breakpoint-large) {
+
+		.uk-width-large-1-12 { width: 8.333%; }
+		.uk-width-large-2-12 { width: 16.666%; }
+		.uk-width-large-3-12 { width: 25%; }
+		.uk-width-large-4-12 { width: 33.333%; }
+		.uk-width-large-5-12 { width: 41.666%; }
+		.uk-width-large-6-12 { width: 50%; }
+		.uk-width-large-7-12 { width: 58.333%; }
+		.uk-width-large-8-12 { width: 66.666%; }
+		.uk-width-large-9-12 { width: 75%; }
+		.uk-width-large-10-12 { width: 83.333%; }
+		.uk-width-large-11-12 { width: 91.666%; }
+
+	}	
+}
+
+
+/*======================================
+=            Container Mods            =
+======================================*/
+.uk-container { 
+	max-width: 1230px !important;
+}
+
+.uk-visible-midsmall {
+	display: none; 
+	@media (max-width: @breakpoint-midsmall-max) {
+		display: block; 
+	}
+
+}
+
+.uk-hidden-midsmall {
+	display: block; 
+	@media (min-width: @breakpoint-midsmall) {
+		display: none; 
+	}
+
+}
+
+.uk-hidden-midlarge {
+	display: none; 
+	@media (min-width: @breakpoint-midlarge) {
+		display: block; 
+	}
+}
+
+.uk-visible-midlarge {
+	display: none;
+	@media (max-width: @breakpoint-midlarge-max) {
+		display: block; 
+	}
+}
+
+
+
+
+
+/*=====  End of Container Mods  ======*/
+
+
+/*=====  End of UIKIT GRID EXTENSION  ======*/
+
+
+
+/*============================
+=            Base            =
+============================*/
+body {
+	overflow-x: hidden;
+}
+
+@base-body-font-family: 'Open Sans', sans-serif;
+@base-heading-font-family: 'Open Sans', sans-serif; 
+
+h1 {
+	font-weight: 400;
+	letter-spacing: -1px;
+	b {
+		font-weight: 700;
+		display: block;
+		font-size: 110%;
+	}
+
+	@media screen and (max-width: @breakpoint-small-max) {
+		font-size: 23px;
+		line-height: 23px;
+	}
+}
+
+h2 {
+	@media screen and (max-width: @breakpoint-small-max) {
+		font-size: 27px;
+		line-height: 23px;
+	}
+}
+
+h3 {
+	font-weight: 400;
+	letter-spacing: -0.4px;
+
+	b {
+		font-weight: 800;
+		display: block;
+	}
+	@media screen and (max-width: @breakpoint-small-max) {
+		font-size: 27px;
+		line-height: 31px;
+	}
+}
+
+h4 {
+	font-weight: 300;
+	letter-spacing: 0.25px;
+	text-transform: none;
+	color: #444;
+	@media screen and (max-width: @breakpoint-small-max) {
+		font-size: 17px;
+		line-height: 20px;
+	}
+}
+
+.tm-mobile-text-small {	
+	@media screen and (max-width: @breakpoint-small-max) {
+		font-size: 12px;
+		line-height: 16px;
+	}
+}
+
+
+.deco-hr {
+	border-color: @global-primary-background;
+	border-width: 5px;
+}
+/*=====  End of Base  ======*/
+
+//
+// Icon
+//
+
+@icon-font-path: "../uikit/fonts";
+
+/*==============================
+=            Button            =
+==============================*/
+.uk-button {
+	border-radius: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+
+/*=====  End of Button  ======*/
+
+/*=============================
+=            Block            =
+=============================*/
+.uk-block-small { padding: 20px 0; }
+
+
+/*=====  End of Block  ======*/
+
+
+/*==============================
+=            Navbar            =
+==============================*/
+
+@navbar-nav-font-family: 'CenturyGothic', sans-serif;
+
+.uk-navbar {
+	position: relative;
+	z-index: 1;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+	.uk-navbar-brand {
+
+		@media screen and (min-width: @breakpoint-midlarge) {
+			border-right: 2px solid #5c5daa;
+			padding-right: 65px !important;
+		}
+
+	}
+}
+.uk-navbar {
+	text-transform: uppercase;
+
+	.menu-button {
+		position: relative;
+		background-color: #fff;
+		margin-left: 15px;
+		line-height: @navbar-nav-height;
+		padding: 0 30px;
+		font-family: @navbar-nav-font-family;
+		font-weight: 700;
+
+		a {
+			color: @global-link-color;
+			font-size: 16px;
+			line-height: 1.2;
+			height: auto;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&:hover {
+			background-color: #fff;
+			a {
+				background-color: #fff;
+				color: @global-link-color;
+			}
+		}
+		@media screen and (min-width: @breakpoint-midlarge) {
+			
+			padding-right: 0;
+
+			&::after {
+				position: absolute;
+				display: block;
+				content: '';
+				background-color: #fff;
+				z-index: 1;
+				left: 100%;
+				height: 100%;
+				top: 0;
+				width: 1000%;
+			}
+
+		}
+
+	}
+
+	.mobile-menu-button {
+		@media screen and (max-width: @breakpoint-midsmall-max) {
+			display: none !important;
+		}
+	}
+
+}
+
+/*=====  End of Navbar  ======*/
+
+/*=================================
+=            Thumbnail            =
+=================================*/
+.uk-thumbnail {
+
+	img {
+		border: 4px solid #2e3092;
+		padding: 6px;
+		border-radius: 50%;
+	}
+
+	.uk-thumbnail-caption {
+		padding-top: 4px;
+		text-align: center;
+		color: #2e3092;
+		font-weight: 700;
+		text-transform: uppercase;		
+	}
+
+}
+
+
+/*=====  End of Thumbnail  ======*/
+.tm-home-exp {
+	ul { padding-left: 0; }
+	li { 
+		list-style: none;
+		background: url(../images/li-circle.png) no-repeat left 5px; 
+		padding-left: 35px; 
+		color: #2e3092; 
+		font-size: 18px; 
+		font-weight: 600; 
+		font-style: italic; 
+		line-height: 18px; 
+		margin: 15px 0; 
+			@media screen and (max-width: @breakpoint-small-max) {
+				font-size: 13px;
+				margin: 3px 0;
+			}
+
+	}	
+}

@@ -1,0 +1,54 @@
+.custom-underline {
+	h6 {
+		position: relative;
+		&:after {
+			position: absolute;
+			content: '';
+			display: block;
+			border-left: 4px solid #fff;
+			border-right: 35px solid #b7b7b7;
+			top: 34px;
+			left: 0px;
+			width: 4px;
+			height: 4px;
+		}
+	}
+	h6+div {
+		padding-top:30px;
+	}
+}
+.footer {
+	font-size: 13px;
+	line-height: 19px;
+	font-weight: 300;
+	a, a:hover {
+		color:#fff !important;
+		text-decoration: none;
+	}
+	@media (min-width: 1630px) {
+		.uk-container { max-width: 1300px !important; }
+		.uk-grid { margin-left: -96px; }
+		.uk-grid > * { padding-left: 96px; }
+	}
+	.instag-gallery	{
+		display: flex;
+		flex-wrap: wrap;
+		div {
+			flex-basis: 33.3333%;
+		}
+	}
+	ul li {
+		padding-left: 20px;
+		font-family: "Open Sans",sans-serif;
+		font-size: 13px;
+		font-weight: 700;
+		background: url(../images/li-bg.png) no-repeat left center;
+	}
+	.social-media a {
+		padding: 10px 5px;
+	}
+	.contact-panel {
+		font-weight: 500;
+		p { margin-top: 0; }
+	}
+}
